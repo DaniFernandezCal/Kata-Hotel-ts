@@ -1,0 +1,23 @@
+{
+  "name": "hotel",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "clean": "tsc -b src/tsconfig-prod.json --clean",
+    "prepare": "rm -rf lib && tsc -b src/tsconfig-prod.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-unit": "rm -rf .test_dir && tsc -b tests/unit && NODE_ENV=test mocha --reporter ${MOCHA_REPORTER:-spec} '.test_dir/tests/unit/**/*.js'",
+    "test-acceptance": "tsc -b tests/acceptance && mocha --reporter ${MOCHA_REPORTER:-spec} '.test_dir/tests/acceptance/**/*.js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.3",
+    "@types/node": "^14.11.2",
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2",
+    "tslib": "^2.0.1",
+    "typescript": "^3.7.2"
+  }
+}

@@ -1,0 +1,3 @@
+- Hotel Manager: Set all the different types of rooms and respective quantities for her hotel.
+- Company Admin: Add/delete employees and also create booking policies for her company and employees.
+- Employee: Book a hotel room
